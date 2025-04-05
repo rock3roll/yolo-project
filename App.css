@@ -1,0 +1,338 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+}
+
+.file-name {
+  font-size: 14px;
+  color: #444;
+  margin-top: 5px;
+}
+/* Fixed Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.header {
+  position: fixed;              /* Makes the header stick to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  background-color: #4CAF50;     /* Center the heading */
+  align-items: center;          /* Vertically center items */
+  height: 70px;
+ 
+  padding: 0 20px;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;                /* Ensures it stays on top of other content */
+}
+
+.header-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.header-button:hover {
+  background-color: #45a049;
+}
+
+
+
+/* Main Container */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 80px; /* Space for fixed header */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Home Page */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* File Upload Box */
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  border: 2px dashed #4CAF50;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.file-upload:hover {
+  background-color: #e8f5e9;
+}
+
+.file-upload input {
+  display: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: #388E3C;
+}
+
+/* Result Page */
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+/* Detection Result Heading */
+h2 {
+  font-size: 26px;
+  color: #333;
+  margin: 30px 0;
+}
+
+/* Display Uploaded Image */
+.uploaded-image {
+  width: 50%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Table */
+table {
+  width: 100% !important;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+td {
+  font-size: 16px;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Feedback Button */
+.feedback-btn {
+  margin-top: 30px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.feedback-btn:hover {
+  background-color: #1976D2;
+}
+
+/* Feedback Modal */
+.feedback-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.feedback-modal .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  background: none; 
+  color: black;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.feedback-modal .close-btn:hover {
+  color: white; /* Darker red */
+}
+
+
+
+
+
+/* Modal Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.feedback-modal h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.feedback-modal label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.feedback-modal input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.feedback-modal button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.feedback-modal button:hover {
+  background-color: #388E3C;
+}
+
+/* Close Button */
+.close-btn {
+  margin-top: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.close-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Feedback Submission Alert */
+.alert {
+  display: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.alert.show {
+  display: block;
+}
