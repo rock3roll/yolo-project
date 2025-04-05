@@ -1,0 +1,50 @@
+virtualenv 
+fasapi
+uvicorn
+opencv-python
+yolov5
+numpy
+pillow
+python-dotenv
+python-multipart
+pymongo
+requests
+
+fastapi uvicorn yolov5 torch opencv-python pillow numpy
+
+npm install -> react-icons/fa , mongodb
+
+
+
+in backend folder - we need to have main.py and uploads folder
+in frontend folder - we will have the reactjs stuff 
+
+
+
+
+
+
+create 2 folders - backend and frontend 
+
+create virtual environment 
+
+pip install virtualenv 
+python -m venv myenv 
+myenv\Scripts\activate
+
+in first terminal -> do: cd backend, pip install fastapi uvicorn opencv-python pillow yolov5 torch numpy
+                         next create main.py and write the code and save
+                         run -> uvicorn main:app --reload 
+in second terminal -> update App.jsx and App.css and do -> npm run dev 
+
+
+
+in second terminal - 
+
+in frontend run this commands - ( nodejs is needed in prior)
+1. npm create vite@latest .
+2. select react , next javascript
+3. npm install 
+do changes in App.jsx and App.css 
+4. npm install react-icons/fa 
+5. npm run dev
